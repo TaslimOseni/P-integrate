@@ -53,16 +53,141 @@ public class SplashActivity extends AppCompatActivity {
         findViewById(R.id.pay_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(validateUI() && isInternetAvailable()){
-//                    performCharge1();
-//                }
-//                else{
+                if(validateUI() && isInternetAvailable()){
+                    performCharge1();
+                }
+                else{
 //                    do your thing
-//                }
+                }
             }
         });
     }
 
 
+    private boolean validateUI(){
+        boolean valid = true;
+
+        String email = emailField.getText().toString();
+        if (TextUtils.isEmpty(email)) {
+            emailField.setError("Required.");
+            valid = false;
+        } else {
+            emailField.setError(null);
+        }
+
+        String cardNumber = cardNumberField.getText().toString();
+        if (TextUtils.isEmpty(cardNumber)) {
+            cardNumberField.setError("Required.");
+            valid = false;
+        } else {
+            cardNumberField.setError(null);
+        }
+
+
+        String expiryMonth = expiryMonthField.getText().toString();
+        if (TextUtils.isEmpty(expiryMonth)) {
+            expiryMonthField.setError("Required.");
+            valid = false;
+        } else {
+            expiryMonthField.setError(null);
+        }
+
+        String expiryYear = expiryYearField.getText().toString();
+        if (TextUtils.isEmpty(expiryYear)) {
+            expiryYearField.setError("Required.");
+            valid = false;
+        } else {
+            expiryYearField.setError(null);
+        }
+
+        String cvv = cvvField.getText().toString();
+        if (TextUtils.isEmpty(cvv)) {
+            cvvField.setError("Required.");
+            valid = false;
+        } else {
+            cvvField.setError(null);
+        }
+
+        return valid;
+    }
+
+
+    private boolean isInternetAvailable(){
+        ConnectivityManager connectivityManager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null;
+    }
+
+
+    private void performCharge1(){
+
+        String email = emailField.getText().toString().trim();
+        String cardNumber = cardNumberField.getText().toString().trim();
+        int expiryMonth = Integer.parseInt(expiryMonthField.getText().toString().trim());
+        int expiryYear = Integer.parseInt(expiryYearField.getText().toString().trim());
+        String cvv = cvvField.getText().toString().trim();
+
+
+        try {
+            Card card = new Card(cardNumber, expiryMonth, expiryYear, cvv);
+
+            if (!(card.isValid())) {
+                Toast.makeText(getApplicationContext(), "Card is not Valid", Toast.LENGTH_LONG).show();
+                return;
+            }
+
+
+            Charge charge = new Charge();
+
+            charge.setCard(card);
+            charge.setEmail(email);
+
+            //The value below is the amount that'd be charged..
+            charge.setAmount(1000);
+
+            performCharge2(charge);
+        }
+
+
+        catch(Exception e){
+            Toast.makeText(getApplicationContext(), "Failed...", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+
+
+
+    }
+
+
+    public void performCharge2(Charge charge){
+        PaystackSdk.chargeCard(this, charge, new Paystack.TransactionCallback(){
+            @Override
+            public void onSuccess(Transaction transaction){
+                Toast.makeText(getApplicationContext(), "Payment successful!!!", Toast.LENGTH_LONG).show();
+                //do your remaining stuff
+            }
+
+            @Override
+            public void beforeValidate(Transaction transaction) {
+                //set a progress bar or something
+            }
+
+            @Override
+            public void onError(Throwable error, Transaction transaction){
+                new AlertDialog.Builder(getApplicationContext())
+                        .setMessage("Payment unsuccessful, please try again later")
+                        .setCancelable(false)
+                        .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //try again
+                            }
+                        })
+                        .show();
+
+            }
+        });
+    }
 
 }
