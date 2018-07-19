@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">P-integrate</string>
+
+    <string name="email_text">Email</string>
+    <string name="pref_emil">Preferred email</string>
+
+    <string name="card_number_text">Card Number</string>
+
+    <string name="mm">MM</string>
+    <string name="yy">YY</string>
+    <string name="cvv">CVV</string>
+
+
+    <string name="exp">Expiry</string>
+    <string name="pay">Pay now</string>
+
 </resources>
