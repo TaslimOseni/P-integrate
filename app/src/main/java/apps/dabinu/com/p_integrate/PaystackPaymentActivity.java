@@ -21,7 +21,7 @@ import co.paystack.android.model.Charge;
 
 
 
-public class PaystackPaymentActivity extends AppCompatActivity {
+public class PaystackPaymentActivity extends AppCompatActivity{
 
 
 /*    Before you continue, make sure you have done the following:
@@ -29,14 +29,12 @@ public class PaystackPaymentActivity extends AppCompatActivity {
 1.  Create an account on http://paystack.com, complete the registration, create a new project and generate your public key.
 2.  Add the line: ~implementation 'co.paystack.android:paystack:3.0.10'~ to your app-level gradle dependency.
 3.  Add the line: ~<uses-permission android:name="android.permission.INTERNET" />~ to your manifest.
-4.  Using the key generated in step 1,
 
 */
 
 
     private String your_api_key;    //the API key generated from step 1 above.
     private EditText emailField, cardNumberField, expiryMonthField, expiryYearField, cvvField;
-    private Button payButton;
 
 
     
@@ -47,7 +45,7 @@ public class PaystackPaymentActivity extends AppCompatActivity {
 
 
         
-        //This following line is very important, you must initialize the Paystack Android SDK before use.
+        //This following line is very important, you must initialize the Paystack SDK before using any Paystack class or interface.
         PaystackSdk.initialize(this.getApplicationContext());
 
         
@@ -63,8 +61,9 @@ public class PaystackPaymentActivity extends AppCompatActivity {
         expiryMonthField = findViewById(R.id.user_expiry_month);
         expiryYearField = findViewById(R.id.user_expiry_year);
         cvvField = findViewById(R.id.user_cvv);
-        payButton = findViewById(R.id.pay_button);
 
+
+        Button payButton = findViewById(R.id.pay_button);
         
         
         //handle the onClick when the 'pay-button' is pressed
@@ -75,7 +74,7 @@ public class PaystackPaymentActivity extends AppCompatActivity {
                 //check whether user filled all the fields and there is internet connection
 
                 if(isUserEntryValid() && isInternetAvailable()){
-                    prepareToChargeUser(2000);  //In this case, we're charging the user #2000
+                    prepareToChargeUser(2000 * 100);  //In this case, we're charging the user #2000
                 }
 
                 else{
