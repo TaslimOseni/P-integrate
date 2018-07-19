@@ -6,8 +6,7 @@ This is a demo app that guides Android developers on how to integrate several po
 ## Supported payment platforms
  
  - <a href="#jumpone">Paystack</a>
- - <a href="google.com">Google Pay</a>
- - <a href="google.com">GT-Pay</a>
+ - <a href="#jumptwo">Google Pay (google-pay branch ==> not ready)</a>
  
 With the help of awesome developers like you, we hope to expand our database of supported payment platforms.
 
@@ -15,10 +14,11 @@ With the help of awesome developers like you, we hope to expand our database of 
 ## Usage
 Simply clone this repository and follow the code guides. Emphasis was put in making sure the code was well commented.
 
+<hr /><br />
 
 # <div id="jumpone">Paystack
 
-<a href="http://paystack.com"><i>Official documentation</i></a><br />
+<a href="https://github.com/PaystackHQ/paystack-android"><i>Documentation</i></a><br />
 Before you proceed to do anything, make sure you have the following set up:
 
 <ul>
@@ -28,6 +28,16 @@ Before you proceed to do anything, make sure you have the following set up:
  
  </ul>
  </div>
+ 
+ 
+ <hr /><br />
+
+# <div id="jumptwo">Google Pay
+ <a href="https://developers.google.com/pay/api/android/"><i>Documentation</i></a><br />
+Project currently on google-pay branch.. Feel free to contribute!
+ </div>
+ 
+ 
 
 
 ## Acknowledgement
