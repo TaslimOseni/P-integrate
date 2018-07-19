@@ -2,15 +2,16 @@
 
 This is a demo app that guides Android developers on how to integrate several popular payment platforms into their apps.
 
-<br />
+<hr />
+
 ## Supported payment platforms
  
  - <a href="#jumpone">Paystack</a>
  - <a href="#jumptwo">Google Pay (google-pay branch ==> not ready)</a>
  
 With the help of awesome developers like you, we hope to expand our database of supported payment platforms.
+<hr />
 
-<br />
 ## Usage
 Simply clone this repository and follow the code guides. Emphasis was put in making sure the code was well commented.
 
