@@ -2,7 +2,7 @@
 
 This is a demo app that guides Android developers on how to integrate several popular payment platforms into their apps.
 
-
+<br />
 ## Supported payment platforms
  
  - <a href="#jumpone">Paystack</a>
@@ -10,7 +10,7 @@ This is a demo app that guides Android developers on how to integrate several po
  
 With the help of awesome developers like you, we hope to expand our database of supported payment platforms.
 
-
+<br />
 ## Usage
 Simply clone this repository and follow the code guides. Emphasis was put in making sure the code was well commented.
 
@@ -36,9 +36,7 @@ Before you proceed to do anything, make sure you have the following set up:
  <a href="https://developers.google.com/pay/api/android/"><i>Documentation</i></a><br />
 Project currently on google-pay branch.. Feel free to contribute!
  </div>
- 
- 
 
-
+<br /><br />
 ## Acknowledgement
 Special thanks to my siblings, Tawakalt and Abdul-salaam Oseni. Most times, a phone call to you guys is all the inspiration I need.
