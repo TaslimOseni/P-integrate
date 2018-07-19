@@ -30,6 +30,9 @@ public class PaystackPaymentActivity extends AppCompatActivity{
 2.  Add the line: ~implementation 'co.paystack.android:paystack:3.0.10'~ to your app-level gradle dependency.
 3.  Add the line: ~<uses-permission android:name="android.permission.INTERNET" />~ to your manifest.
 
+
+Note that this activity must be in focus throughout the entire process of payment..
+
 */
 
 
