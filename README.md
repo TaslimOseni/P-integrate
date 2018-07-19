@@ -5,9 +5,9 @@ This is a demo app that guides Android developers on how to integrate several po
 
 ## Supported payment platforms
  
- - Paystack
- - Google Pay
- - GT-Pay
+ - <a href="google.com">Paystack</a>
+ - <a href="google.com">Google Pay</a>
+ - <a href="google.com">GT-Pay</a>
  
 With the help of awesome developers like you, we hope to expand our database of supported payment platforms.
 
