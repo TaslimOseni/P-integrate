@@ -1,4 +1,4 @@
-## P-integrate
+# P-integrate
 
 This is a demo app that guides Android developers on how to integrate several popular payment platforms into their apps.
 
@@ -13,8 +13,8 @@ With the help of awesome developers like you, we hope to expand our database of 
 
 
 ## Usage
-Simply clone this repository and follow the code guides. Emphasis was put in making sure the code was well commented 
+Simply clone this repository and follow the code guides. Emphasis was put in making sure the code was well commented.
 
 
-## Acknoledgment
+## Acknowledgement
 Special thanks to my siblings, Tawakalt and Abdul-salaam Oseni. Most times, a phone call to you guys is all the inspiration I need.
