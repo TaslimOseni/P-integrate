@@ -13,7 +13,7 @@ With the help of awesome developers like you, we hope to expand our database of 
 <hr />
 
 ## Usage
-Simply clone this repository and follow the code guides. Emphasis was put in making sure the code was well commented.
+Simply clone this repository and follow the code guides. Emphasis was put in making sure the code was well commented. Also, this app is simply a guide and wasn't built for direct installation; however, if you want to test run any of the activities, simply place an intent filter inside the activity tag in the manifest.
 
 <hr /><br />
 
