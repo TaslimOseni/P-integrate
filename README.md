@@ -25,7 +25,7 @@ Before you proceed to do anything, make sure you have the following set up:
 <ul>
  <li>Create an account on http://paystack.com, complete the registration, create a new project and generate your public key.</li>
  <li>Add the line: <b>implementation 'co.paystack.android:paystack:3.0.10'</b> to your app-level gradle dependency.</li>
- <li>Add the line: <b><uses-permission android:name="android.permission.INTERNET" /></b> to your manifest.</li>
+ <li>Add the line: <b>uses-permission android:name="android.permission.INTERNET"</b> to your manifest.</li>
  
  </ul>
  </div>
