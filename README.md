@@ -7,7 +7,7 @@ This is a demo app that guides Android developers on how to integrate several po
 ## Supported payment platforms
  
  - <a href="#jumpone">Paystack</a>
- - <a href="#jumptwo">Google Pay (google-pay branch ==> not ready)</a>
+ - <a href="#jumptwo">Google Pay (not ready)</a>
  
 With the help of awesome developers like you, we hope to expand our database of supported payment platforms.
 <hr />
