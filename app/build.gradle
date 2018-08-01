@@ -18,14 +18,22 @@ android {
     }
 }
 
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+dependencies{
 
     //Required dependency: None of the Paystack classes and interfaces would work without this dependency
     implementation 'co.paystack.android:paystack:3.0.10'
 
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    //Required dependencies: None of the Google-pay classes and interfaces would work without this dependencies
+    implementation 'com.google.android.gms:play-services-wallet:15.0.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+
+    //other dependencies
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:mediarouter-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
