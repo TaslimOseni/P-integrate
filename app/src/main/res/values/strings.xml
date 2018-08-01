@@ -14,4 +14,12 @@
     <string name="exp">Expiry</string>
     <string name="pay">Pay now</string>
 
+    <string name="item_name_text">Item name:</string>
+    <string name="item_name">Nigerian-made wrist watch</string>
+
+    <string name="item_amount_text">Amount:</string>
+    <string name="item_amount">$2000</string>
+
+    <string name="pay_with_google">Pay with Google</string>
+
 </resources>
