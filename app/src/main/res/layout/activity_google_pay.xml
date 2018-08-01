@@ -3,6 +3,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#232323"
     tools:context=".GooglePayActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Item name:"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Nigerian-made wrist watch"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@android:color/holo_green_dark"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Amount:"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:textColor="@android:color/holo_orange_dark"
+                android:paddingEnd="0dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="$2000"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@android:color/holo_green_dark"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Pay with Google"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="#ffffff"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+    </LinearLayout>
 
 </RelativeLayout>
