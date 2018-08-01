@@ -33,7 +33,9 @@ public class PaystackPaymentActivity extends AppCompatActivity{
 */
 
 
-    private String your_api_key;    //the API key generated from step 1 above.
+    //paste the API key generated from step 1 in the line below:
+    private String your_api_key = "";
+
     private EditText emailField, cardNumberField, expiryMonthField, expiryYearField, cvvField;
 
 
