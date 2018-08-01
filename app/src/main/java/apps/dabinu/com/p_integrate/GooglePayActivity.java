@@ -49,10 +49,10 @@ public class GooglePayActivity extends AppCompatActivity{
     private PaymentsClient mPaymentsClient;
     private static final int LOAD_PAYMENT_DATA_REQUEST_CODE = 991; // Randomly-picked code [You can use this].
 
-//    Let's create an object for our inner class PaymentUtil
-      PaymentsUtil paymentsUtil = new PaymentsUtil();
+    //    Let's create an object for our inner class PaymentUtil
+    PaymentsUtil paymentsUtil = new PaymentsUtil();
 
-//    This is a progress dialog
+    //    This is a progress dialog
     ProgressDialog progressDialog;
 
     //Price, make sure you include shipping and taxes
