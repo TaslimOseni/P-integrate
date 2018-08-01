@@ -33,28 +33,30 @@ public class PaystackPaymentActivity extends AppCompatActivity{
 */
 
 
-    private String your_api_key;    //the API key generated from step 1 above.
+    //paste the API key generated from step 1 in the line below:
+    private String your_api_key = "";
+
     private EditText emailField, cardNumberField, expiryMonthField, expiryYearField, cvvField;
 
 
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paystack_payment);
 
 
-        
+
         //This following line is very important, you must initialize the Paystack SDK before using any Paystack class or interface.
         PaystackSdk.initialize(this.getApplicationContext());
 
-        
-        
+
+
         //Also, set your public key (from step 1 above) like this:
         PaystackSdk.setPublicKey(your_api_key);
 
 
-        
+
         //initialize views
         emailField = findViewById(R.id.user_email_address);
         cardNumberField = findViewById(R.id.user_card_number);
@@ -64,8 +66,8 @@ public class PaystackPaymentActivity extends AppCompatActivity{
 
 
         Button payButton = findViewById(R.id.pay_button);
-        
-        
+
+
         //handle the onClick when the 'pay-button' is pressed
         payButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -152,25 +154,25 @@ public class PaystackPaymentActivity extends AppCompatActivity{
             */
 
 
-            //Create a new Card object based on the card details
-            Card card = new Card(cardNumber, expiryMonth, expiryYear, cvv);
+        //Create a new Card object based on the card details
+        Card card = new Card(cardNumber, expiryMonth, expiryYear, cvv);
 
-            //check whether the card is valid like this:
-            if (!(card.isValid())) {
-                Toast.makeText(getApplicationContext(), "Card is not Valid", Toast.LENGTH_LONG).show();
-                return;
-            }
+        //check whether the card is valid like this:
+        if (!(card.isValid())) {
+            Toast.makeText(getApplicationContext(), "Card is not Valid", Toast.LENGTH_LONG).show();
+            return;
+        }
 
 
-            //Create a new Charge object
-            Charge charge = new Charge();
+        //Create a new Charge object
+        Charge charge = new Charge();
 
-            charge.setCard(card);
-            charge.setEmail(email);
-            charge.setAmount(amountToBeCharged);
+        charge.setCard(card);
+        charge.setEmail(email);
+        charge.setAmount(amountToBeCharged);
 
-            //proceed to charge the user
-            chargeTheUser(charge);
+        //proceed to charge the user
+        chargeTheUser(charge);
 
 
     }

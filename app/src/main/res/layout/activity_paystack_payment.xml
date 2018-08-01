@@ -78,6 +78,8 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/expiryBody"
+                android:layout_toStartOf="@+id/cvvBody"
                 android:layout_alignParentStart="true">
 
                 <TextView
@@ -128,10 +130,10 @@
 
 
 
-
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/cvvBody"
                 android:layout_alignParentEnd="true">
 
                 <TextView
@@ -165,10 +167,10 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:text="@string/pay"
             android:textAllCaps="true"
-            android:backgroundTint="@android:color/holo_red_dark"
+            android:background="@android:color/holo_red_dark"
             android:textColor="#ffffff"
             android:id="@+id/pay_button"
             android:layout_marginTop="10dp"
