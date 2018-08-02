@@ -51,6 +51,7 @@ public class GooglePayActivity extends AppCompatActivity{
 
     ---------------------------------------------------------------------------------
 
+
     SUMMARY:
 
     When the user clicks the 'pay' button, the following sequence of activities happen:
