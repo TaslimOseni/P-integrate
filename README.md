@@ -1,20 +1,35 @@
 # P-integrate
 
+## Overview
+
 This is a demo app that guides Android developers on how to integrate several popular payment platforms into their apps.
 
-<hr />
 
 ## Supported payment platforms
  
  - <a href="#jumpone">Paystack</a>
- - <a href="#jumptwo">Google Pay (not ready)</a>
+ - <a href="#jumptwo">Google Pay</a>
  
-With the help of awesome developers like you, we hope to expand our database of supported payment platforms.
-<hr />
+ Apart from the aforementioned platforms, there are several other platforms still in the works, feel free to contribute (to their respective branches) to hasten the release. They are:
+  - Rave
+  - PayU
+  - RAZORPAY
+ 
+<i>If there's a popular payment platform you have experience with that's not included, fork the repo, create a new branch, write your awesome code and hit that pull request button</i>
+
 
 ## Usage
-Simply clone this repository and follow the code guides. Emphasis was put in making sure the code was well commented. Also, this app is simply a guide and wasn't built for direct installation; however, if you want to test run any of the activities, simply place an intent filter inside the activity tag in the manifest.
+Simply clone this repository and follow the code guides. <b>Emphasis was put in making sure the code was well commented</b>. Also, this app is simply a guide and wasn't built for direct installation; however, if you want to test-run any of the activities, simply place a launcher-type intent filter inside the activity tag in the manifest.
 
+## How to Contribute
+ - Fork this repository.
+ - Navigate to the branch representing the payment platform you want to contribute to. If you want to add your own payment platform, simply create a new branch.
+ - Write your super awesome code with super detailed commenting.
+ - Test your code and ascertain that it is working fine.
+ - Get a cup of coffee.
+ - Create a pull request while sipping from the cup (4 sips per minute).
+ 
+ 
 <hr /><br />
 
 # <div id="jumpone">Paystack
