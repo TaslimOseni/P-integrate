@@ -13,8 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--To test any of the activities, paste the intent filter below inside the activity tag-->
 
+        <!--To test any of the activities, paste the intent filter below inside the activity tag-->
 
 
         <!--<intent-filter>-->
@@ -24,9 +24,11 @@
         <!--</intent-filter>-->
 
 
-        <activity android:name=".PaystackPaymentActivity">
 
-        </activity>
+        <activity android:name=".PaystackPaymentActivity"> </activity>
+
+        <activity android:name=".GooglePayActivity"> </activity>
+
     </application>
 
 </manifest>
