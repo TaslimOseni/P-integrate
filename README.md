@@ -78,6 +78,7 @@ Before you proceed to do anything, make sure you have the following set up:
 
 <ul>
  <li>Add the following lines to your build.gradle (app) file: 
+  
   - implementation 'com.google.android.gms:play-services-wallet:15.0.1'
   - implementation 'com.android.support:support-v4:27.1.1'
   - implementation 'com.android.support:appcompat-v7:27.1.1'
