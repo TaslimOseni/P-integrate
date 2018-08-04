@@ -100,7 +100,7 @@ public class GooglePayActivity extends AppCompatActivity{
         progressDialog = new ProgressDialog(this);
 
 
-//        Pay button:
+//        The Pay button:
         Button pay = findViewById(R.id.pay_button);
 
         pay.setOnClickListener(new View.OnClickListener() {
