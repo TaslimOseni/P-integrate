@@ -25,6 +25,7 @@ dependencies {
     //Required dependency: None of the Paystack classes and interfaces would work without this dependency
     implementation 'co.paystack.android:paystack:3.0.10'
 
+    //other dependencies:
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
