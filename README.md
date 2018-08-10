@@ -26,8 +26,8 @@ Simply clone this repository and follow the code guides. <b>Emphasis was put in 
  - Navigate to the branch representing the payment platform you want to contribute to. If you want to add your own payment platform, simply create a new branch.
  - Write your super awesome code with super detailed commenting.
  - Test your code and ascertain that it is working fine.
- - Get a cup of coffee (VERY IMPORTANT).
- - Create a pull request while sipping from the cup (4 sips per minute).
+ - Get a cup of coffee (Ginger tea works fine too)
+ - Create a pull request while sipping from the cup.
  
  
 <hr /><br />
@@ -38,7 +38,7 @@ Simply clone this repository and follow the code guides. <b>Emphasis was put in 
 
 ## Requirement:
  
- - Android SDKv16 and above
+ - Android SDK 16 and above
  - A completely registered account on <a href="http://paystack.com">The Official Paystack website</a>
  - A public key generated from the <a href="http://paystack.com">Paystack website</a>
  
