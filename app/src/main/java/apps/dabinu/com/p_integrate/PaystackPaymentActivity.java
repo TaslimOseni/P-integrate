@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import co.paystack.android.Paystack;
@@ -39,24 +38,24 @@ public class PaystackPaymentActivity extends AppCompatActivity{
     private EditText emailField, cardNumberField, expiryMonthField, expiryYearField, cvvField;
 
 
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paystack_payment);
 
 
-
+        
         //This following line is very important, you must initialize the Paystack SDK before using any Paystack class or interface.
         PaystackSdk.initialize(this.getApplicationContext());
 
-
-
+        
+        
         //Also, set your public key (from step 1 above) like this:
         PaystackSdk.setPublicKey(your_api_key);
 
 
-
+        
         //initialize views
         emailField = findViewById(R.id.user_email_address);
         cardNumberField = findViewById(R.id.user_card_number);
@@ -65,18 +64,16 @@ public class PaystackPaymentActivity extends AppCompatActivity{
         cvvField = findViewById(R.id.user_cvv);
 
 
-        Button payButton = findViewById(R.id.pay_button);
-
 
         //handle the onClick when the 'pay-button' is pressed
-        payButton.setOnClickListener(new View.OnClickListener(){
+        findViewById(R.id.pay_button).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
 
                 //check whether user filled all the fields and there is internet connection
 
                 if(isUserEntryValid() && isInternetAvailable()){
-                    prepareToChargeUser(2000 * 100);  //In this case, we're charging the user #2000
+                    prepareToChargeUser(2000 * 100);  //In this case, we're charging the user #2000 in kobo (200,000)
                 }
 
                 else{
@@ -88,40 +85,39 @@ public class PaystackPaymentActivity extends AppCompatActivity{
 
 
     private boolean isUserEntryValid(){
-        boolean isValid = true;
 
         //check whether the email field is empty
-        if(TextUtils.isEmpty(emailField.getText().toString())){
+        if(isEmpty(emailField)){
             emailField.setError("This field is required");
-            isValid = false;
+            return false;
         }
 
         //check whether the card-number field is empty
-        else if(TextUtils.isEmpty(cardNumberField.getText().toString())){
+        else if(isEmpty(cardNumberField)){
             cardNumberField.setError("This field is required");
-            isValid = false;
+            return false;
         }
 
         //check whether the expiry-month field is empty
-        else if(TextUtils.isEmpty(expiryMonthField.getText().toString())){
+        else if(isEmpty(expiryMonthField)){
             expiryMonthField.setError("This field is required");
-            isValid = false;
+            return false;
         }
 
         //check whether the expiry-year field is empty
-        else if(TextUtils.isEmpty(expiryYearField.getText().toString())){
+        else if(isEmpty(expiryYearField)){
             expiryYearField.setError("This field is required");
-            isValid = false;
+            return false;
         }
 
         //check whether the card-cvv field is empty
-        else if(TextUtils.isEmpty(cvvField.getText().toString())){
+        else if(isEmpty(cvvField)){
             cvvField.setError("This field is required");
-            isValid = false;
+            return false;
         }
 
 
-        return isValid;
+        return true;
     }
 
 
@@ -135,11 +131,11 @@ public class PaystackPaymentActivity extends AppCompatActivity{
     private void prepareToChargeUser(int amountToBeCharged){
 
         //get all the EditText entries as String and int values for convenience
-        String email = emailField.getText().toString().trim();
-        String cardNumber = cardNumberField.getText().toString().trim();
-        int expiryMonth = Integer.parseInt(expiryMonthField.getText().toString().trim());
-        int expiryYear = Integer.parseInt(expiryYearField.getText().toString().trim());
-        String cvv = cvvField.getText().toString().trim();
+        String email = getText(emailField);
+        String cardNumber = getText(cardNumberField);
+        int expiryMonth = Integer.parseInt(getText(expiryMonthField));
+        int expiryYear = Integer.parseInt(getText(expiryYearField));
+        String cvv = getText(cvvField);
 
 
             /*
@@ -154,25 +150,25 @@ public class PaystackPaymentActivity extends AppCompatActivity{
             */
 
 
-        //Create a new Card object based on the card details
-        Card card = new Card(cardNumber, expiryMonth, expiryYear, cvv);
+            //Create a new Card object based on the card details
+            Card card = new Card(cardNumber, expiryMonth, expiryYear, cvv);
 
-        //check whether the card is valid like this:
-        if (!(card.isValid())) {
-            Toast.makeText(getApplicationContext(), "Card is not Valid", Toast.LENGTH_LONG).show();
-            return;
-        }
+            //check whether the card is valid like this:
+            if (!(card.isValid())) {
+                Toast.makeText(getApplicationContext(), "Card is not Valid", Toast.LENGTH_LONG).show();
+                return;
+            }
 
 
-        //Create a new Charge object
-        Charge charge = new Charge();
+            //Create a new Charge object
+            Charge charge = new Charge();
 
-        charge.setCard(card);
-        charge.setEmail(email);
-        charge.setAmount(amountToBeCharged);
+            charge.setCard(card);
+            charge.setEmail(email);
+            charge.setAmount(amountToBeCharged);
 
-        //proceed to charge the user
-        chargeTheUser(charge);
+            //proceed to charge the user
+            chargeTheUser(charge);
 
 
     }
@@ -210,5 +206,11 @@ public class PaystackPaymentActivity extends AppCompatActivity{
         });
     }
 
+    private String getText(EditText editText){
+        return editText.getText().toString().trim();
+    }
 
+    private boolean isEmpty(EditText editText){
+        return TextUtils.isEmpty(getText(editText));
+    }
 }
