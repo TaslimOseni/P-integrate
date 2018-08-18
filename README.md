@@ -14,6 +14,7 @@ This is a demo app that guides Android developers on how to integrate several po
   - <a href="https://github.com/taslimoseni/p-integrate/tree/rave">Rave</a>
   - <a href="https://github.com/taslimoseni/p-integrate/tree/payu">PayU</a>
   - <a href="https://github.com/taslimoseni/p-integrate/tree/razorpay">RazorPay</a>
+  - <a href="https://github.com/taslimoseni/p-integrate/tree/vigipay">VigiPay</a>
  
 <i>If there's a popular payment platform you have experience with that's not included, fork the repo, create a new branch, write your awesome code and hit that pull request button</i>.
 
