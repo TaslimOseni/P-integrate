@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a demo app that guides Android developers on how to integrate several popular payment platforms into their apps.
+This is a demo app that guides Android developers on how to integrate several popular payment platforms into their apps. This project is dedicated to all Open-Source Developers in the Milky Way. You guys are the real heroes!!!
 
 
 ## Supported payment platforms
@@ -91,7 +91,3 @@ Before you proceed to do anything, make sure you have the following set up:
  After all of these have been satisfied, clone this repository, open it up in your android studio and follow the steps. They are well commented!
  
  </div>
-
-<br /><br />
-## Acknowledgement
-Special thanks to my siblings, Tawakalt and Abdul-salaam Oseni. Most times, a phone call to you guys is all the inspiration I need.
