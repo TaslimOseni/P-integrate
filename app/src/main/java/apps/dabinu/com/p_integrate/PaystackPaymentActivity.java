@@ -20,7 +20,6 @@ import co.paystack.android.model.Card;
 import co.paystack.android.model.Charge;
 
 
-
 public class PaystackPaymentActivity extends AppCompatActivity{
 
 
